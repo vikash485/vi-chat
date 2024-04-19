@@ -52,7 +52,8 @@ export const getMessages = async (req,res) => {
 
         if(!conversation)
         {
-            return res.json(200).json([]);
+            // console.log("empty convo");
+            return res.status(200).json([]);
         }
 
         const messages = conversation.messages;
